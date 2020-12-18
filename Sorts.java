@@ -22,7 +22,6 @@ public class Sorts{
       for (int j=i; j<data.length; j++){
         if (data[j]<data[smallestIndex]){
           smallestIndex=j;
-
         }
       }
       int temp = data[i];
@@ -33,7 +32,13 @@ public class Sorts{
 
   public static void insertionSort(int[] data){
     for (int i=0; i<data.length; i++){
-
+      smallestIndex = i;
+      int original = data[i];
+      while (smallestIndex>0 && data[smallestIndex-1]>original){
+        data[smallestIndex] = data[smallesIndex-1];
+        smallestIndex--;
+      }
+      data[smallestIndex] = original;
     }
   }
 }
