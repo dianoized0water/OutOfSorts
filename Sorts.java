@@ -3,7 +3,7 @@ public class Sorts{
     int temp = 0;
     boolean done = false;
     for (int i=0 ; i<data.length && !done; i++){
-      done = true
+      done = true;
       for (int j=1; j<data.length-i; j++){
         if (data[j-1]>data[j]){
           temp = data[j-1];
@@ -32,10 +32,10 @@ public class Sorts{
 
   public static void insertionSort(int[] data){
     for (int i=0; i<data.length; i++){
-      smallestIndex = i;
+      int smallestIndex = i;
       int original = data[i];
       while (smallestIndex>0 && data[smallestIndex-1]>original){
-        data[smallestIndex] = data[smallesIndex-1];
+        data[smallestIndex] = data[smallestIndex-1];
         smallestIndex--;
       }
       data[smallestIndex] = original;
