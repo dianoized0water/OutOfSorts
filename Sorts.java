@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Sorts{
   public static void bubbleSort(int[] data){
     int temp = 0;
@@ -40,5 +42,26 @@ public class Sorts{
       }
       data[smallestIndex] = original;
     }
+  }
+
+  public static void main(String[] args){
+    int[] unsorted = new int[1000];
+    for(int i = 0; i<unsorted.length; i++){
+      unsorted[i] = (int)(Math.floor(Math.random()*10001));
+    }
+    int[] bubbleSorted = Arrays.copyOf(unsorted, unsorted.length);
+    bubbleSort(bubbleSorted);
+    int[] selectionSorted = Arrays.copyOf(unsorted, unsorted.length);
+    selectionSort(selectionSorted);
+    int[] insertionSorted = Arrays.copyOf(unsorted, unsorted.length);
+    insertionSort(insertionSorted);
+    Arrays.sort(unsorted);
+
+    System.out.println("bubble sort test");
+    System.out.println(Arrays.equals(unsorted, bubbleSorted));
+    System.out.println("selection sort test");
+    System.out.println(Arrays.equals(unsorted, selectionSorted));
+    System.out.println("insetion sort test");
+    System.out.println(Arrays.equals(unsorted, insertionSorted));
   }
 }
