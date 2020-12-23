@@ -45,7 +45,7 @@ public class Sorts{
   }
 
   public static void main(String[] args){
-    int[] unsorted = new int[1000];
+    /* int[] unsorted = new int[1000];
     for(int i = 0; i<unsorted.length; i++){
       unsorted[i] = (int)(Math.floor(Math.random()*10001));
     }
@@ -62,6 +62,6 @@ public class Sorts{
     System.out.println("selection sort test");
     System.out.println(Arrays.equals(unsorted, selectionSorted));
     System.out.println("insetion sort test");
-    System.out.println(Arrays.equals(unsorted, insertionSorted));
+    System.out.println(Arrays.equals(unsorted, insertionSorted)); */
   }
 }
